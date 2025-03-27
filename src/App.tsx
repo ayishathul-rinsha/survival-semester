@@ -32,7 +32,7 @@ function App() {
     const upperGuess = guess.toUpperCase();
 
      if (score <= 0) {
-      setMessage('GAME OVER - OUT OF POINTS!');
+      setMessage('GAME OVER - OUT OF POINTS! THE WORD WAS +${guess} ');
       setGameOver(true);
     }
     
