@@ -21,7 +21,7 @@ function App() {
     setWord(TARGET_WORDS[randomIndex]);
     setGuess('');
     setMessage('');
-    setScore(500);
+    setScore(300);
     setAttempts(0);
     setBeforeWords([]);
     setAfterWords([]);
