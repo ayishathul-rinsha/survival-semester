@@ -6,7 +6,7 @@ function App() {
   const [word, setWord] = useState('');
   const [guess, setGuess] = useState('');
   const [message, setMessage] = useState('');
-  const [score, setScore] = useState(500);
+  const [score, setScore] = useState(300);
   const [attempts, setAttempts] = useState(0);
   const [beforeWords, setBeforeWords] = useState<string[]>([]);
   const [afterWords, setAfterWords] = useState<string[]>([]);
@@ -39,7 +39,7 @@ function App() {
     if (!VALID_WORDS.includes(upperGuess)) {
       setMessage('Not a valid word!');
       setGuess('');
-      setScore(Math.max(0, score - 50));
+      setScore(Math.max(0, score - 20));
       setAttempts(attempts + 1);
       return;
     }
@@ -50,7 +50,7 @@ function App() {
       return;
     }
 
-    setScore(Math.max(0, score - 50));
+    setScore(Math.max(0, score - 20));
     setAttempts(attempts + 1);
 
     if (upperGuess < word) {
