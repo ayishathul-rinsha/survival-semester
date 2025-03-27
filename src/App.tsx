@@ -59,6 +59,7 @@ function App() {
       setAfterWords([...afterWords, upperGuess].sort());
     }
     
+    setGuess('');
   };
 
   return (
