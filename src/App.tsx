@@ -32,7 +32,7 @@ function App() {
     const upperGuess = guess.toUpperCase();
 
      if (score <= 0) {
-      setMessage('GAME OVER - OUT OF POINTS! THE WORD WAS +${guess} ');
+      setMessage(`GAME OVER - OUT OF POINTS! THE WORD WAS {word}`);
       setGameOver(true);
     }
     
@@ -137,7 +137,7 @@ function App() {
               <p className="text-xl mb-6">
                 {score > 0 
                   ? `Solved with ${score} points remaining!` 
-                  : 'You ran out of points!'}
+                  : `You ran out of points! The Word Was ${word}`}
               </p>
               <button
                 onClick={startNewGame}
